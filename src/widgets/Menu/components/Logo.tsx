@@ -54,7 +54,7 @@ const LogoText = styled.div`
   color: #FFF;
   letter-spacing: 1.2px;
   @media screen and (max-width: 480px) {
-    font-size: 168px;
+    display: none;
   }
 `;
 const LogoPreText = styled.div`   
@@ -65,9 +65,9 @@ const LogoPreText = styled.div`
     color: #A5C437;
     padding-left: 10px;
     @media screen and (max-width: 480px) {
-      // display: none;
-      padding-left: 5px;
-      font-size: 18px;
+      display: none;
+      // padding-left: 5px;
+      // font-size: 18px;
     }
 `;
 
