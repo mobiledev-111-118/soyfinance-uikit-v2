@@ -27,11 +27,11 @@ export const links = [
     items: [
       {
         label: "Exchange",
-        href: "https://exchange.pancakeswap.finance",
+        href: "https://app.soy.finance",
       },
       {
         label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool",
+        href: "https://app.soy.finance/#/pool",
       },
     ],
   },
@@ -58,15 +58,15 @@ export const links = [
     items: [
       {
         label: "Github",
-        href: "https://github.com/polysafemoon",
+        href: "https://github.com/SoyFinance/soyfinance-swap",
       },
       {
         label: "Docs",
-        href: "https://docs.polysafemoon.finance",
+        href: "https://callisto.network/",
       },
       {
         label: "Blog",
-        href: "https://polysafemoon.medium.com",
+        href: "https://callisto.network/blog/",
       },
     ],
   },
@@ -79,14 +79,18 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/polysafemoon_official",
+        href: "https://t.me/Soy_Finance",
+      },
+      {
+        label: "Pусский",
+        href: "https://t.me/Soy_Finance_Ru",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/PolySafemoon",
+    href: "https://twitter.com/Soy_Finance",
   },
 ];
 

@@ -1,11 +1,12 @@
 import React, { cloneElement, Children, ReactElement } from "react";
-import styled, { DefaultTheme } from "styled-components";
+import styled from "styled-components";
 import { space } from "styled-system";
+import { PancakeTheme } from "../..";
 import { scales, variants } from "../Button/types";
 import { ButtonMenuProps } from "./types";
 
 interface StyledButtonMenuProps extends ButtonMenuProps {
-  theme: DefaultTheme;
+  theme: PancakeTheme;
 }
 
 const getBackgroundColor = ({ theme, variant }: StyledButtonMenuProps) => {

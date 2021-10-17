@@ -210,7 +210,7 @@ export const UserMenu: React.FC = () => {
             <UserMenuItem as={Link} to="/profile">
               React Router Link
             </UserMenuItem>
-            <UserMenuItem as="a" href="https://pancakeswap.finance" target="_blank">
+            <UserMenuItem as="a" href="https://app.soy.finance" target="_blank">
               Link
             </UserMenuItem>
             <UserMenuDivider />

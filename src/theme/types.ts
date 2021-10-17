@@ -77,6 +77,7 @@ export type Colors = {
   btnPrimaryTxt: string;
   btnSecondaryBk: string;
   btnSecondaryTxt: string;
+  icontext: string;
 };
 
 export type ZIndices = {

@@ -1,9 +1,10 @@
-import styled, { DefaultTheme } from "styled-components";
+import styled from "styled-components";
 import { space } from "styled-system";
+import { PancakeTheme } from "../..";
 import { CardProps } from "./types";
 
 interface StyledCardProps extends CardProps {
-  theme: DefaultTheme;
+  theme: PancakeTheme;
 }
 
 /**

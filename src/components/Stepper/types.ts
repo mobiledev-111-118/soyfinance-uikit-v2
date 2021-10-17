@@ -1,13 +1,13 @@
-import { DefaultTheme } from "styled-components";
+import { PancakeTheme } from "../..";
 
 export interface ThemedProps {
-  theme: DefaultTheme;
+  theme: PancakeTheme;
 }
 
 export type Status = "past" | "current" | "future";
 
 export interface StatusProps extends ThemedProps {
-  theme: DefaultTheme;
+  theme: PancakeTheme;
   status: Status;
 }
 

@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import { usePopper } from "react-popper";
-import { ThemeProvider, DefaultTheme } from "styled-components";
-import { light, dark } from "../../theme";
+import { ThemeProvider } from "styled-components";
+
+import { light, dark, PancakeTheme } from "../../theme";
 import isTouchDevice from "../../util/isTouchDevice";
 import { StyledTooltip, Arrow } from "./StyledTooltip";
 import { TooltipOptions, TooltipRefs } from "./types";
 
-const invertTheme = (currentTheme: DefaultTheme) => {
+const invertTheme = (currentTheme: PancakeTheme) => {
   if (currentTheme.isDark) {
     return light;
   }

@@ -51,20 +51,32 @@ const StyledLink = styled(Link)`
 const LogoText = styled.div`   
   font-weight: 600;
   font-size: 28px;
-  color: ${({ theme }) => theme.colors.text};
-  padding-left: 10px;
+  color: #FFF;
   letter-spacing: 1.2px;
   @media screen and (max-width: 480px) {
-    display: none;
+    font-size: 168px;
   }
+`;
+const LogoPreText = styled.div`   
+    display: flex;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 27px;
+    color: #A5C437;
+    padding-left: 10px;
+    @media screen and (max-width: 480px) {
+      // display: none;
+      padding-left: 5px;
+      font-size: 18px;
+    }
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon width="24px"/>
-      <LogoText>PolySafeMoon</LogoText>
+      <LogoIcon width="34px"/>
+      <LogoPreText >Soy.<LogoText>Swap</LogoText></LogoPreText>
     </>
   );
 
@@ -78,11 +90,11 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
         )}
       </MenuButton>
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="PolySafeMoon home page">
+        <StyledLink as="a" href={href} aria-label="soyfinance home page">
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink to={href} aria-label="PolySafeMoon home page">
+        <StyledLink to={href} aria-label="soyfinance home page">
           {innerLogo}
         </StyledLink>
       )}

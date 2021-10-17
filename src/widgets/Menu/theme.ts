@@ -6,5 +6,5 @@ export const light: NavTheme = {
 };
 
 export const dark: NavTheme = {
-  background: "rgba(0,0,0,.85)",
+  background: "rgb(41, 45, 27)",
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { DefaultTheme } from "styled-components";
+import styled from "styled-components";
 import CheckmarkCircleIcon from "../Svg/Icons/CheckmarkCircle";
 import ErrorIcon from "../Svg/Icons/Error";
 import BlockIcon from "../Svg/Icons/Block";
@@ -9,10 +9,11 @@ import { IconButton } from "../Button";
 import { CloseIcon } from "../Svg";
 import Flex from "../Box/Flex";
 import { AlertProps, variants } from "./types";
+import { PancakeTheme } from "../..";
 
 interface ThemedIconLabel {
   variant: AlertProps["variant"];
-  theme: DefaultTheme;
+  theme: PancakeTheme;
   hasDescription: boolean;
 }
 
@@ -70,6 +71,7 @@ const CloseHandler = styled.div`
 const StyledAlert = styled(Flex)`
   position: relative;
   background-color: ${({ theme }) => theme.alert.background};
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 16px;
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
 `;
