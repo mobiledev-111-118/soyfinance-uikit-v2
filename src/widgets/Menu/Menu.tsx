@@ -7,6 +7,8 @@ import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import dark from '../../../src/dark.svg';
+import white from '../../../src/white.svg';
 
 const Wrapper = styled.div`
   position: relative;
@@ -38,19 +40,48 @@ const BodyWrapper = styled.div`
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
+  // margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
+  // ${({ theme }) => theme.mediaQueries.nav} {
+  //   margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
+  //   max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+  // }
+  margin-left: 10px;
+  margin-right: 0px;
+  @media screen and (max-width: 560px) {
+    margin-left: 0;
+  }
+`;
+
+const RightPane = styled.div<{ isPushed: boolean }>`
+  margin-top: 48px;
+  width: 100%;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+    width: ${({ isPushed }) => `calc(100% - ${isPushed? SIDEBAR_WIDTH_FULL - 40 : SIDEBAR_WIDTH_REDUCED}px)`};
+    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL - 20 : SIDEBAR_WIDTH_REDUCED}px`};
+    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL - 20 : SIDEBAR_WIDTH_REDUCED}px)`};
+  }
+
+  @media screen and (max-width: 560px) {
+    width: calc(100% - 16px);
+    margin-left: 8px;
+  }
+`;
+
+const Img = styled.img<{ isPushed: boolean }>`
+  position: fixed;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: ${({ isPushed }) => `calc(100% - ${isPushed? SIDEBAR_WIDTH_FULL - 20 : SIDEBAR_WIDTH_REDUCED}px)`};
+    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL - 20 : SIDEBAR_WIDTH_REDUCED}px)`};
   }
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
   position: fixed;
   height: 100%;
+  background-attachment: fixed;
 
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
@@ -131,9 +162,12 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
         />
-        <Inner isPushed={isPushed} showMenu={showMenu}>
-          {children}
-        </Inner>
+        <RightPane isPushed={isPushed}>
+          <Img src={isDark? dark: white} isPushed={isPushed}/>
+          <Inner isPushed={isPushed} showMenu={showMenu} >
+            {children}
+          </Inner>
+        </RightPane>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
     </Wrapper>
