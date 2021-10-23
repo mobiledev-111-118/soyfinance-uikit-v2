@@ -19,7 +19,7 @@ const StyledUserMenu = styled(Flex)`
   padding-left: 40px;
   padding-right: 8px;
   position: relative;
-
+  border: 2px solid ${({theme}) => theme.colors.secondary};
   &:hover {
     opacity: 0.65;
   }
@@ -160,7 +160,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
       <StyledUserMenu ref={setTargetRef} {...props}>
         <MenuIcon avatarSrc={avatarSrc} variant={variant} />
         <LabelText title={text || account}>{text || accountEllipsis}</LabelText>
-        <ChevronDownIcon color="text" width="24px" />
+        <ChevronDownIcon color="text" width="18px" />
       </StyledUserMenu>
       <Menu style={styles.popper} ref={setTooltipRef} {...attributes.popper} isOpen={isOpen}>
         {children}

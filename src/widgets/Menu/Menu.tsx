@@ -56,7 +56,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 `;
 
 const RightPane = styled.div<{ isPushed: boolean }>`
-  margin-top: 48px;
+  margin-top: 64px;
   width: 100%;
   ${({ theme }) => theme.mediaQueries.nav} {
     width: ${({ isPushed }) => `calc(100% - ${isPushed? SIDEBAR_WIDTH_FULL - 40 : SIDEBAR_WIDTH_REDUCED}px)`};

@@ -3,7 +3,7 @@ import { shadows } from "../../theme/base";
 import { CardTheme } from "./types";
 
 export const light: CardTheme = {
-  background: "rgba(255,255,255,.7)",
+  background: "rgba(254,254,254,1)",
   boxShadow: shadows.level1,
   boxShadowActive: shadows.active,
   boxShadowSuccess: shadows.success,
@@ -18,7 +18,7 @@ export const light: CardTheme = {
 };
 
 export const dark: CardTheme = {
-  background: "rgba(0,0,0,.7)",
+  background: "rgba(91, 97, 67, 1)",
   boxShadow: shadows.level1,
   boxShadowActive: shadows.active,
   boxShadowSuccess: shadows.success,
