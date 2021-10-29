@@ -42,10 +42,9 @@ export const links = [
     status: status.SOON,
   },
   {
-    label: "Pools",
-    icon: "PoolIcon",
-    href: "/pool",
-    status: status.SOON,
+    label: "CHOAM Sale",
+    icon: "ChoamIcon",
+    href: "https://choamtoken.com/",
   },
   {
     label: "Info",
