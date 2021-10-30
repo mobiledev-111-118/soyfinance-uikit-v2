@@ -26,6 +26,7 @@ export interface MenuSubEntry {
   href: string;
   calloutClass?: string;
   status?: LinkStatus;
+  target?: string;
 }
 
 export interface MenuEntry {
@@ -36,6 +37,7 @@ export interface MenuEntry {
   calloutClass?: string;
   initialOpenState?: boolean;
   status?: LinkStatus;
+  target?: string;
 }
 
 export interface PanelProps {

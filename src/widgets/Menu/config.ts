@@ -45,6 +45,7 @@ export const links = [
     label: "CHOAM Sale",
     icon: "ChoamIcon",
     href: "https://choamtoken.com/",
+    target: "_blank"
   },
   {
     label: "Info",
