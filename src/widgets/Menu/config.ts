@@ -42,6 +42,18 @@ export const links = [
     status: status.SOON,
   },
   {
+    label: "Bridge",
+    icon: "BridgeIcon",
+    href: "https://callistobridge.netlify.app/",
+    status: status.SOON,
+  },
+  {
+    label: "IDO",
+    icon: "IDOIcon",
+    href: "/ido",
+    status: status.SOON,
+  },
+  {
     label: "CHOAM Sale",
     icon: "ChoamIcon",
     href: "https://choamtoken.com/",

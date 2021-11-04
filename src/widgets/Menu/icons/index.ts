@@ -1,5 +1,7 @@
 export { default as FarmIcon } from "./Farm";
 export { default as ChoamIcon } from "./Choam";
+export { default as IDOIcon } from "./IDO";
+export { default as BridgeIcon } from "./Bridge";
 export { default as GroupsIcon } from "./Groups";
 export { default as HamburgerIcon } from "./Hamburger";
 export { default as HamburgerCloseIcon } from "./HamburgerClose";
