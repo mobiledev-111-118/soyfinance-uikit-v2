@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
+import NFTIcon from "../icons/NFT.svg";
 import { SvgProps } from "../../../components/Svg";
 import * as IconModule from "../icons";
 import Accordion from "./Accordion";
@@ -22,6 +23,11 @@ const Container = styled.div`
   height: calc(100%-66px);
 `;
 
+const StyledImg = styled.img`
+  width: 24px;
+  margin-right: 8px;
+`
+
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
 
@@ -32,7 +38,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
     <Container>
       {links.map((entry) => {
         const Icon = Icons[entry.icon];
-        const iconElement = <Icon width="24px" mr="8px" />;
+        const iconElement = entry.label === "NFT" ? <StyledImg src={NFTIcon} alt="" /> : <Icon width="24px" mr="8px" />;
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
 
         if (entry.items) {

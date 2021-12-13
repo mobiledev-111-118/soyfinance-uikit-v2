@@ -60,6 +60,12 @@ export const links = [
     target: "_blank"
   },
   {
+    label: "NFT",
+    icon: "NftIcon",
+    href: "/nft",
+    status: status.SOON,
+  },
+  {
     label: "Info",
     icon: "InfoIcon",
     href: "/info",
