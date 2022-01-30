@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { PancakeRoundIcon } from "../../../components/Svg";
 import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
-import { AddIcon } from "../../../components/Svg";
+import { MetamaskIcon } from "../../../components/Svg";
 
 interface Props {
   cakePriceUsd?: number;
@@ -24,7 +24,7 @@ const PriceLink = styled.a`
 `;
 
 const AddContainer = styled.button`
-  border: 1px solid #A5C437;
+  border: none;
   width: 26px;
   height: 26px;
   padding: 0;
@@ -47,7 +47,7 @@ const CakePrice: React.FC<Props> = ({ cakePriceUsd, addSoyToMetamask }) => {
         <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
       </PriceLink>
       <AddContainer onClick={addSoyToMetamask}>
-        <AddIcon color="primary"/>
+        <MetamaskIcon color="primary"/>
       </AddContainer>
     </>
   ) : (
