@@ -98,6 +98,7 @@ const Menu: React.FC<NavProps> = ({
   cakePriceUsd,
   links,
   children,
+  addSoyToMetamask
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
@@ -161,6 +162,7 @@ const Menu: React.FC<NavProps> = ({
           cakePriceUsd={cakePriceUsd}
           pushNav={setIsPushed}
           links={links}
+          addSoyToMetamask={addSoyToMetamask}
         />
         <RightPane isPushed={isPushed}>
           <Img src={isDark? dark: white} isPushed={isPushed}/>

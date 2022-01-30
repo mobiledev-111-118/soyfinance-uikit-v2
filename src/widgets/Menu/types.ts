@@ -48,6 +48,7 @@ export interface PanelProps {
   langs: Language[];
   setLang: (lang: Language) => void;
   links: Array<MenuEntry>;
+  addSoyToMetamask?: () => void;
 }
 
 export interface NavProps extends PanelProps {

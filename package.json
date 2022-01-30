@@ -1,6 +1,6 @@
 {
   "name": "@soy-libs/uikit2",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "Set of UI components for soyfinance projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

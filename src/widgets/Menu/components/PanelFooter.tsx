@@ -43,6 +43,7 @@ const PanelFooter: React.FC<Props> = ({
   currentLang,
   langs,
   setLang,
+  addSoyToMetamask
 }) => {
   if (!isPushed) {
     return (
@@ -57,7 +58,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        <CakePrice cakePriceUsd={cakePriceUsd} />
+        <CakePrice cakePriceUsd={cakePriceUsd} addSoyToMetamask={addSoyToMetamask}/>
         <SocialLinks />
       </SocialEntry>
       <SettingsEntry>
