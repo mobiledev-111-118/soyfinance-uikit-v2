@@ -13,6 +13,10 @@ export const status = {
     text: "NEW",
     color: "success",
   },
+  SOLDOUT: <LinkStatus>{
+    text: "SOLD OUT",
+    color: "failure"
+  }
 };
 
 export const links = [
@@ -39,6 +43,12 @@ export const links = [
     label: "Farms",
     icon: "FarmIcon",
     href: "/farms",
+    status: status.SOON,
+  },
+  {
+    label: "Staking Pools",
+    icon: "PoolIcon",
+    href: "/pools",
     status: status.SOON,
   },
   {
