@@ -52,6 +52,12 @@ export const links = [
     status: status.SOON,
   },
   {
+    label: "Launchpads",
+    icon: "LaunchpadIcon",
+    href: "/launchpad",
+    status: status.SOON,
+  },
+  {
     label: "Bridge",
     icon: "BridgeIcon",
     href: "https://callistobridge.netlify.app/",
