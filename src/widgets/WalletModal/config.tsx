@@ -1,6 +1,7 @@
 import Metamask from "../../components/Svg/Icons/Metamask";
 import WalletConnect from "../../components/Svg/Icons/WalletConnect";
 import TrustWallet from "../../components/Svg/Icons/TrustWallet";
+import Unstoppable from "../../components/Svg/Icons/Unstoppable";
 // import MathWallet from "../../components/Svg/Icons/MathWallet";
 // import TokenPocket from "../../components/Svg/Icons/TokenPocket";
 // import BinanceChain from "../../components/Svg/Icons/BinanceChain";
@@ -23,10 +24,16 @@ const connectors: Config[] = [
     priority: 2,
   },
   {
+    title: "Unstoppable Domain",
+    icon: Unstoppable,
+    connectorId: ConnectorNames.Unstoppable,
+    priority: 3,
+  },
+  {
     title: "Trust Wallet",
     icon: TrustWallet,
     connectorId: ConnectorNames.Injected,
-    priority: 3,
+    priority: 4,
   },
   // {
   //   title: "MathWallet",

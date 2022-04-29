@@ -90,6 +90,7 @@ export { default as TokenPocketIcon } from "./Icons/TokenPocket";
 export { default as TrophyGoldIcon } from "./Icons/TrophyGold";
 export { default as TrustWalletIcon } from "./Icons/TrustWallet";
 export { default as TuneIcon } from "./Icons/Tune";
+export { default as UnstoppableIcon } from "./Icons/Unstoppable";
 export { default as VisibilityOff } from "./Icons/VisibilityOff";
 export { default as VisibilityOn } from "./Icons/VisibilityOn";
 export { default as VolumeOffIcon } from "./Icons/VolumeOff";
